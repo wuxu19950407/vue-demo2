@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h2>我是标题2</h2>
+    <h2 @click="click1">我是标题2</h2>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -90,6 +90,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods:{
+    click1(){
+      console.log(this.msg)
     }
   }
 }
