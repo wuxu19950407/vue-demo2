@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
     <h2 @click="click1">我是标题2</h2>
+    <app-Test></app-Test>
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+     <el-button type="primary" index="Test">主要按钮</el-button>
     <ul>
       <li>
         <a
@@ -85,7 +86,11 @@
 </template>
 
 <script>
+import Test from './Test'
 export default {
+  components: {
+    "app-Test":Test
+  },
   name: 'HelloWorld',
   data () {
     return {
