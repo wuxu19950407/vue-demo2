@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
     <h2 @click="click1">我是标题2</h2>
+
     <app-Test></app-Test>
     <h1>{{ msg }}</h1>
-     <el-button type="primary" index="Test">主要按钮</el-button>
+    <el-button  type="info" v-for="(item,index) in anniu" :key="index"  @click="log(item,index)" >{{item}}</el-button>
     <ul>
       <li>
         <a href="https://vuejs.org" target="_blank">Core Docs</a>
@@ -41,23 +42,41 @@
 </template>
 
 <script>
-import Test from './Test'
+import Test from "./Test";
 export default {
   components: {
-    "app-Test":Test
+    "app-Test": Test
   },
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      msg: "Welcome to Your Vue.js App",
+      anniu: ["登录", "授权", "重置"]
     };
   },
   methods: {
     click1() {
       console.log(this.da);
       this.$router.push({
-        path:'/Account'
-      })
+        path: "/Account"
+      });
+    },
+    // 跳转登陆
+    log(e,c) {
+      console.log(e,c)
+      if(e=='登录'){
+        this.$router.push({
+          path:'/Account'
+        })
+      }else if(e=='授权'){
+        this.$router.push({
+          path:'Account/Authorization'
+        })
+      }else{
+        this.$router.push({
+          path:'Account/Reset'
+        })
+      }
     }
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <!-- 测试输出 -->
     <div>
-    <div class="indexContent" v-for="item in xin_body">
+    <div class="indexContent" v-for="(item,index) in xin_body" :key="index">
         <div class="indexContentTitle">
           <div>{{ item.foo }}{{ item.bar }}</div>
         </div>
@@ -15,6 +15,7 @@ export default {
   data () {
     return  {
       xin_body:[],
+
       };
   },
   created() { 

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello1">
     <div class="round">
       <div class="biankuang">
         <h1 class="login">LOGO</h1>
@@ -23,7 +23,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.hello {
+/* 背景色设置 */
+.hello1 {
   position: fixed;
   width: 100%;
   height: 100%;

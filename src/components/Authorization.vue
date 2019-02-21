@@ -36,10 +36,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-/* login样式 */
-.login {
-  margin: 80px 0 60px 0;
-}
 /* 电话号码外边框 */
 .phone {
   border: 1px solid gainsboro;
