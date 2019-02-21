@@ -55,6 +55,9 @@ export default {
   methods: {
     click1() {
       console.log(this.da);
+      this.$router.push({
+        path:'/Account'
+      })
     }
   }
 };
